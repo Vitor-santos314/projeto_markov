@@ -127,10 +127,17 @@ def salvar_midi_complexo_stream(melodia_gerada):
 # ==========================================
 # INTERFACE VISUAL DO STREAMLIT
 # ==========================================
+# ==========================================
+# INTERFACE VISUAL DO STREAMLIT
+# ==========================================
 st.set_page_config(page_title="Gerador Markov", layout="wide")
 
 st.title("Gerador de melodias com Cadeias de Markov")
-st.markdown("Insira uma partitura MIDI (.mid) para visualizar a matriz estocástica com notas reais e o processo de sorteio probabilístico.")
+
+# Adicione esta linha logo abaixo do título:
+st.warning("Aviso: Este programa encontra-se em estado Beta. Funcionalidades e desempenho estão sendo aprimorados.")
+
+st.markdown("Insira uma partitura MIDI (.mid) para visualizar a matriz estatística com notas reais e o processo de sorteio probabilístico.")
 st.write("---")
 
 if "bytes_saida" not in st.session_state:
